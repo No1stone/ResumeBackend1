@@ -37,4 +37,5 @@ public class ThirdDataSourceConfiguration {
     public SqlSessionTemplate thirdSqlSessionTemplate(@Qualifier("thirdSqlSessionFactory") SqlSessionFactory thirdSqlSessionFactory) {
         return new SqlSessionTemplate(thirdSqlSessionFactory);
     }
+    
 }

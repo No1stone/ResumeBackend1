@@ -4,5 +4,13 @@
         
 <mapper namespace="com.resume.backend.database.mybatis.first.FirstMapper">
 
+	<select id="databaseTest"
+		resultType="com.resume.backend.database.model.TestVo">
+		SELECT
+		id AS id,
+		pw AS pw
+		FROM logintest
+		WHERE id = #{id}
+	</select>
 
 </mapper>
