@@ -25,9 +25,11 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
 
 @Configuration
-@MapperScan(value = "com.resume.backend.database.mybatis.first", sqlSessionFactoryRef = "firstSqlSessionFactory")
+@MapperScan(value = "com.resume.backend.database.mybatis.first", 
+		sqlSessionFactoryRef = "firstSqlSessionFactory")
 @EnableJpaRepositories(basePackages = {
-		"com.resume.backend.database.jpa.entity.first" }, entityManagerFactoryRef = "firstEntityManagerFactory", 
+		"com.resume.backend.database.jpa.entity.first" }, 
+		entityManagerFactoryRef = "firstEntityManagerFactory", 
 		transactionManagerRef = "firstTransactionManager" 
 )
 public class FirstDataSourceConfiguration {
