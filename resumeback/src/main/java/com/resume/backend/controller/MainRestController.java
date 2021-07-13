@@ -15,9 +15,21 @@ public class MainRestController {
 	@Autowired
 	private MybatisService ms;
 	
-	@GetMapping("/test")
-	public void testcont(@RequestParam("id") String id) {
+	@GetMapping("/test1")
+	public void testcont1(@RequestParam("id") String id) {
 		System.out.println(id);
 		ms.TestFirst(id);
+	}
+	
+	@GetMapping("/test2")
+	public void testcont2(@RequestParam("id") String id) {
+		System.out.println(id);
+		ms.TestSecond(id);
+	}
+	
+	@GetMapping("/test3")
+	public void testcont3(@RequestParam("id") String id) {
+		System.out.println(id);
+		ms.TestThird(id);
 	}
 }

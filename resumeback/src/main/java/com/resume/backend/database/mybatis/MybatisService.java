@@ -21,13 +21,30 @@ public class MybatisService {
 	private ThirdMapper third;
 	
 	public void TestFirst(String id) {
-		System.out.println("id확인"+id);
+		System.out.println("id확인 database1"+id);
 		List<TestVo> test = fist.databaseTest(id);
 	 
 		for(TestVo e: test)
 		System.out.println(e.getId()+e.getPw());
-		
-		
+			
+	}
+	
+	public void TestSecond(String id) {
+		System.out.println("id확인 database2"+id);
+		List<TestVo> test = second.databaseTest(id);
+	 
+		for(TestVo e: test)
+		System.out.println(e.getId()+e.getPw());
+			
+	}
+	
+	public void TestThird(String id) {
+		System.out.println("id확인 database3"+id);
+		List<TestVo> test = third.databaseTest(id);
+	 
+		for(TestVo e: test)
+		System.out.println(e.getId()+e.getPw());
+			
 	}
 	
 	
